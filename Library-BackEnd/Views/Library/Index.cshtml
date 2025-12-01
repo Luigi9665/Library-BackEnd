@@ -1,0 +1,50 @@
+﻿@model List<Library_BackEnd.Models.ViewModel.ProductViewModel>
+
+@{
+    ViewData["Title"] = "Library Epicode";
+}
+
+
+<div class="library-container">
+    <div class="library-header">
+        <h1>LIBRARY EPICODE</h1>
+    </div>
+    @if (TempData["Message"] != null)
+    {
+        <div id="TempAlert" class="alert alert-success mt-3">@TempData["Message"]</div>
+    }
+
+    @if (Model != null && Model.Any())
+    {
+        <div class="books-grid">
+            @foreach (var book in Model)
+            {
+                <div class="book-card">
+                    @if (!string.IsNullOrEmpty(book.CoverImageUrl))
+                    {
+                        <img src="@book.CoverImageUrl" alt="@book.Title" class="book-cover" />
+                    }
+                    else
+                    {
+                        <div class="book-cover"></div>
+                    }
+                    <div class="book-info">
+                        <h3 class="book-title">@book.Title</h3>
+                        <div class="availability-status">
+                            <span class="led-indicator @(book.IsAvailable ? "available" : "unavailable")"></span>
+                            <span>@(book.IsAvailable ? "Disponibile" : "Non disponibile")</span>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="empty-state">
+            <div class="empty-state-icon">📚</div>
+            <h2>Nessun libro presente nella biblioteca</h2>
+            <a asp-controller="Library" asp-action="Form" class="add-book-btn">Aggiungi il primo libro</a>
+        </div>
+    }
+</div>

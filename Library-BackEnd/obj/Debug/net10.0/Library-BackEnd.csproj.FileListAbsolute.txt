@@ -1,0 +1,10 @@
+C:\Users\Luigi\Desktop\Epicode\BackEnd\BuildWeekShop\Library-BackEnd\Library-BackEnd\obj\Debug\net10.0\Library-BackEnd.csproj.AssemblyReference.cache
+C:\Users\Luigi\Desktop\Epicode\BackEnd\BuildWeekShop\Library-BackEnd\Library-BackEnd\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\Luigi\Desktop\Epicode\BackEnd\BuildWeekShop\Library-BackEnd\Library-BackEnd\obj\Debug\net10.0\Library-BackEnd.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Luigi\Desktop\Epicode\BackEnd\BuildWeekShop\Library-BackEnd\Library-BackEnd\obj\Debug\net10.0\Library-BackEnd.AssemblyInfoInputs.cache
+C:\Users\Luigi\Desktop\Epicode\BackEnd\BuildWeekShop\Library-BackEnd\Library-BackEnd\obj\Debug\net10.0\Library-BackEnd.AssemblyInfo.cs
+C:\Users\Luigi\Desktop\Epicode\BackEnd\BuildWeekShop\Library-BackEnd\Library-BackEnd\obj\Debug\net10.0\Library-BackEnd.csproj.CoreCompileInputs.cache
+C:\Users\Luigi\Desktop\Epicode\BackEnd\BuildWeekShop\Library-BackEnd\Library-BackEnd\obj\Debug\net10.0\Library-BackEnd.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Luigi\Desktop\Epicode\BackEnd\BuildWeekShop\Library-BackEnd\Library-BackEnd\obj\Debug\net10.0\Library-BackEnd.RazorAssemblyInfo.cache
+C:\Users\Luigi\Desktop\Epicode\BackEnd\BuildWeekShop\Library-BackEnd\Library-BackEnd\obj\Debug\net10.0\Library-BackEnd.RazorAssemblyInfo.cs
+C:\Users\Luigi\Desktop\Epicode\BackEnd\BuildWeekShop\Library-BackEnd\Library-BackEnd\obj\Debug\net10.0\Library-BackEnd.sourcelink.json
