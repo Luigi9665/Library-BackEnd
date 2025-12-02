@@ -1,7 +1,7 @@
 ﻿@model Library_BackEnd.Models.Entity.Book;
 
 @{
-    ViewData["Title"] = "Aggiungi Libro";
+    // Layout = "_Layout";
 }
 
 <style>
@@ -148,8 +148,15 @@
 <div class="form-container my-5">
     <h2 class="form-title">AGGIUNGI LIBRO</h2>
 
-    <form asp-controller="Library" asp-action="CreateBook" method="post">
+    <form asp-controller="Library" asp-action="CreateOrUpdate" method="post">
         <div asp-validation-summary="ModelOnly" class="validation-error"></div>
+
+        @if(Model.Id != Guid.Empty)
+        {
+            @* <input type="hidden" name="_method" value="PUT" /> *@
+        <input type="hidden" asp-for="Id" />
+		}
+
 
         <div class="form-group">
             <label asp-for="Title" class="form-label">Titolo</label>
@@ -183,14 +190,12 @@
         </div>
 
         <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Salva Libro</button>
-            <a asp-action="Index" class="btn btn-secondary" style="text-align: center; text-decoration: none; line-height: 1.5;">Annulla</a>
+            <button type="submit" class="btn btn-primary"> @(Model.Id != Guid.Empty ? "Modifica" : "Salva Libro")
+            </button>
+
+            <button onclick="ReturnToBackoffice()" type="button" class="btn btn-secondary" style="text-align: center; text-decoration: none; line-height: 1.5;"> Annulla </button>
+
         </div>
     </form>
 </div>
 
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
-}

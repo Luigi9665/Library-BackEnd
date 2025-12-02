@@ -4012,11 +4012,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\BuildWeekShop\\Library-BackEnd\\Library-BackEnd\\Library-BackEnd.csproj",
+      "projectUniqueName": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Library-BackEnd.csproj",
       "projectName": "Library-BackEnd",
-      "projectPath": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\BuildWeekShop\\Library-BackEnd\\Library-BackEnd\\Library-BackEnd.csproj",
+      "projectPath": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Library-BackEnd.csproj",
       "packagesPath": "C:\\Users\\Luigi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\BuildWeekShop\\Library-BackEnd\\Library-BackEnd\\obj\\",
+      "outputPath": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

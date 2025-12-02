@@ -1,0 +1,50 @@
+﻿@model Library_BackEnd.Models.Dto.ManagementViewModel;
+
+@{
+    ViewData["Title"] = "Gestione Libri";
+}
+
+<div>
+    <section>
+        <partial name="_Form" model="Model.BookToEdit" />
+    </section>
+
+    @if(TempData["Message"] != null)
+    {
+        <div id="TempAlert" class="alert alert-success mt-3">@TempData["Message"]</div>
+	}
+
+
+    <hr />
+    <section>
+        <partial name="_ListBooksForManagement" model="Model.Books" />
+    </section>
+
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+
+        function ReturnToBackoffice() {
+            console.log("Sei dentro annulla");
+            window.location.replace("/Library/BackOffice");
+        }
+
+        if (document.getElementById("TempAlert")) {
+            setTimeout(function () {
+                var alertBox = document.getElementById("TempAlert");
+                alertBox.style.transition = "opacity 0.5s ease-out";
+                alertBox.style.opacity = "0";
+                setTimeout(function () {
+                    alertBox.remove();
+                }, 500);
+            }, 3000);
+		}
+
+    </script>
+}

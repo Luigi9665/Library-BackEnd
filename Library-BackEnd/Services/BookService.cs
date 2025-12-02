@@ -30,7 +30,21 @@ namespace Library_BackEnd.Services
 
         public bool UpdateBook(Book book)
         {
-            _context.Books.Update(book);
+
+            var existingBook = GetBookById(book.Id);
+
+            if (existingBook == null)
+            {
+                return false;
+            }
+
+            existingBook.Title = book.Title;
+            existingBook.Author = book.Author;
+            existingBook.Genre = book.Genre;
+            existingBook.IsAvailable = book.IsAvailable;
+            existingBook.CoverImageUrl = book.CoverImageUrl;
+            existingBook.CreatedAt = book.CreatedAt;
+
             return _context.SaveChanges() > 0;
         }
 

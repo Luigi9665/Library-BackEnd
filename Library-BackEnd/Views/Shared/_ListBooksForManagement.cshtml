@@ -1,0 +1,92 @@
+﻿@model List<Library_BackEnd.Models.Dto.ProductViewModel>
+
+
+
+
+
+<div class="books-container">
+    <div class="books-header">
+        <h2>LISTA PRODOTTI</h2>
+    </div>
+
+    @if (Model != null && Model.Any())
+    {
+        <div class="table-wrapper">
+            <table class="books-table">
+                <thead>
+                    <tr>
+                        <th style="width: 80px;">Copertina</th>
+                        <th>Titolo</th>
+                        <th>Genere</th>
+                        <th class="center" style="width: 200px;">Stato</th>
+                        <th class="center" style="width: 150px;">Azioni</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var book in Model)
+                    {
+                        <tr>
+                            <td>
+                                @if (!string.IsNullOrEmpty(book.CoverImageUrl))
+                                {
+                                    <img src="@book.CoverImageUrl" alt="@book.Title" class="book-thumbnail" />
+                                }
+                                else
+                                {
+                                    <div class="book-thumbnail-placeholder">📚</div>
+                                }
+                            </td>
+                            <td>
+                                <p class="book-title">@book.Title</p>
+                            </td>
+                            <td>
+                                <p class="book-title">@book.Genre</p>
+                            </td>
+                            <td class="status-cell">
+                                @if (book.IsAvailable)
+                                {
+                                    <span class="status-indicator available">
+                                        <span class="led-dot available"></span>
+                                        Disponibile
+                                    </span>
+                                }
+                                else
+                                {
+                                    <span class="status-indicator unavailable">
+                                        <span class="led-dot unavailable"></span>
+                                        Non Disponibile
+                                    </span>
+                                }
+                            </td>
+                            <td class="actions-cell">
+                                <div class="action-buttons">
+                                    <a asp-controller="Library" asp-action="ToUpdate" asp-route-id="@book.Id" class="action-btn btn-edit" title="Modifica">
+                                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                        </svg>
+                                    </a>
+                                    <form asp-action="Delete" asp-route-id="@book.Id" method="post" style="margin: 0; display: inline;" onsubmit="return confirm('Sei sicuro di voler eliminare questo libro?');">
+                                        <button type="submit" class="action-btn btn-delete" title="Elimina">
+                                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="table-wrapper">
+            <div class="empty-state">
+                <div class="empty-state-icon">📚</div>
+                <h2>Nessun libro presente</h2>
+            </div>
+        </div>
+    }
+</div>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1b1jlZoW9iU=",
+  "dgSpecHash": "OZ2JbCfCvHk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\BuildWeekShop\\Library-BackEnd\\Library-BackEnd\\Library-BackEnd.csproj",
+  "projectFilePath": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Library-BackEnd.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Luigi\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Luigi\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
