@@ -22,7 +22,7 @@ namespace Library_BackEnd.Services
 
         public async Task<List<Category>> GetAllCategories()
         {
-            return await _context.Categories.ToListAsync();
+            return await _context.Categories.OrderBy(c => c.Name).ToListAsync();
         }
 
         public async Task<Category?> GetCategoryByName(string name)

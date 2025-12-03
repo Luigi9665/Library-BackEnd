@@ -1,0 +1,329 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<Library_BackEnd.Models.Entity.Category>
+
+<style>
+    :root {
+        --bg-dark: #1a1a2e;
+        --bg-card: #16213e;
+        --bg-sidebar: #0f1419;
+        --accent: #0f3460;
+        --text-primary: #eee;
+        --text-secondary: #a0a0a0;
+        --border-color: #2a3f5f;
+        --success: #00ff88;
+        --danger: #ff4757;
+    }
+
+    /* Floating Filter Button */
+    .filter-toggle-btn {
+        position: fixed;
+        left: 2rem;
+        bottom: 2rem;
+        width: 60px;
+        height: 60px;
+        background: var(--accent);
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 1000;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .filter-toggle-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(15, 52, 96, 0.6);
+        }
+
+        .filter-toggle-btn svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--text-primary);
+            stroke-width: 2;
+            transition: transform 0.3s ease;
+        }
+
+        .filter-toggle-btn.active svg {
+            transform: rotate(90deg);
+        }
+
+    /* Sidebar Overlay */
+    .sidebar-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1001;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+        .sidebar-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+    /* Sidebar */
+    .filter-sidebar {
+        position: fixed;
+        top: 0;
+        left: -350px;
+        width: 350px;
+        height: 100%;
+        background: var(--bg-sidebar);
+        z-index: 1002;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+        .filter-sidebar.active {
+            left: 0;
+        }
+
+    .sidebar-header {
+        padding: 2rem;
+        border-bottom: 1px solid var(--border-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--bg-card);
+    }
+
+        .sidebar-header h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            color: var(--text-primary);
+        }
+
+    .close-sidebar-btn {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        border-radius: 4px;
+    }
+
+        .close-sidebar-btn:hover {
+            background: var(--accent);
+        }
+
+        .close-sidebar-btn svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--text-primary);
+            stroke-width: 2;
+        }
+
+    .sidebar-content {
+        padding: 2rem;
+    }
+
+    .filter-section {
+        margin-bottom: 2rem;
+    }
+
+    .filter-section-title {
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--text-primary);
+        margin: 0 0 1rem 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+    }
+
+    .filter-option {
+        display: flex;
+        align-items: center;
+        padding: 0.8rem;
+        margin-bottom: 0.5rem;
+        background: var(--bg-card);
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: 1px solid transparent;
+        width: 100%;
+    }
+
+        .filter-option:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .filter-option input[type="checkbox"],
+        .filter-option input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            margin-right: 0.8rem;
+            cursor: pointer;
+            accent-color: var(--success);
+            flex-shrink: 0;
+        }
+
+        .filter-option span {
+            flex: 1;
+            color: var(--text-primary);
+            cursor: pointer;
+            user-select: none;
+            font-size: 0.95rem;
+        }
+
+    .filter-count {
+        color: var(--text-secondary);
+        font-size: 0.85rem;
+        background: var(--bg-sidebar);
+        padding: 0.2rem 0.6rem;
+        border-radius: 12px;
+    }
+
+    .filter-actions {
+        padding: 1.5rem 2rem;
+        border-top: 1px solid var(--border-color);
+        display: flex;
+        gap: 1rem;
+        background: var(--bg-card);
+    }
+
+    .filter-btn {
+        flex: 1;
+        padding: 0.8rem;
+        border: none;
+        border-radius: 6px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 0.9rem;
+    }
+
+    .btn-apply {
+        background: var(--accent);
+        color: var(--text-primary);
+    }
+
+        .btn-apply:hover {
+            background: #134a7a;
+            transform: translateY(-2px);
+        }
+
+    .btn-reset {
+        background: transparent;
+        color: var(--text-secondary);
+        border: 1px solid var(--border-color);
+    }
+
+        .btn-reset:hover {
+            background: var(--bg-sidebar);
+            color: var(--text-primary);
+        }
+
+    /* Scrollbar styling */
+    .filter-sidebar::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .filter-sidebar::-webkit-scrollbar-track {
+        background: var(--bg-sidebar);
+    }
+
+    .filter-sidebar::-webkit-scrollbar-thumb {
+        background: var(--accent);
+        border-radius: 4px;
+    }
+
+        .filter-sidebar::-webkit-scrollbar-thumb:hover {
+            background: #134a7a;
+        }
+</style>
+
+<!-- Floating Filter Button -->
+<button class="filter-toggle-btn" id="filterToggleBtn" onclick="toggleFilterSidebar()">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+    </svg>
+</button>
+
+<!-- Overlay -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleFilterSidebar()"></div>
+
+<!-- Sidebar -->
+<div class="filter-sidebar" id="filterSidebar">
+    <div class="sidebar-header">
+        <h3>FILTRI</h3>
+        <button class="close-sidebar-btn" onclick="toggleFilterSidebar()">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
+
+    <form id="filterForm" method="post" asp-controller="Library" asp-action="FilterResult">
+        <div class="sidebar-content">
+            <!-- Availability Filter -->
+            <div class="filter-section">
+                <h4 class="filter-section-title">Disponibilità</h4>
+
+                <label class="filter-option" for="availability_all">
+                    <input type="radio" name="IsAvailable" value="" id="availability_all" checked>
+                    <span>Tutti i libri</span>
+                </label>
+
+                <label class="filter-option" for="availability_available">
+                    <input type="radio" name="IsAvailable" value="true" id="availability_available">
+                    <span>Disponibili</span>
+                </label>
+
+                <label class="filter-option" for="availability_unavailable">
+                    <input type="radio" name="IsAvailable" value="false" id="availability_unavailable">
+                    <span>Non disponibili</span>
+                </label>
+            </div>
+
+            <!-- Categories Filter -->
+            <div class="filter-section">
+                <h4 class="filter-section-title">Categorie</h4>
+
+                @if (Model != null && Model.Any())
+                {
+                    @foreach (var category in Model)
+                    {
+                        <label class="filter-option" for="category_@category.Id">
+                            <input type="checkbox" name="CategoryIds" value="@category.Id" id="category_@category.Id">
+                            <span>@category.Name</span>
+                        </label>
+                    }
+                }
+                else
+                {
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Nessuna categoria disponibile</p>
+                }
+            </div>
+        </div>
+
+        <div class="filter-actions">
+            <button type="submit" class="filter-btn btn-apply">Applica</button>
+            <button type="button" class="filter-btn btn-reset" onclick="resetFilters()">Reset</button>
+        </div>
+    </form>
+</div>
+
+

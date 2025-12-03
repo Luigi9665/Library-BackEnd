@@ -1,4 +1,6 @@
-﻿using Library_BackEnd.Models.Entity;
+﻿using Library_BackEnd.Models.Dto;
+using Library_BackEnd.Models.Entity;
+using Microsoft.EntityFrameworkCore;
 
 namespace Library_BackEnd.Services
 {
@@ -56,6 +58,27 @@ namespace Library_BackEnd.Services
             }
             _context.Books.Remove(book);
             return _context.SaveChanges() > 0;
+        }
+
+
+        public async Task<List<Book>> GetBooksByCategoryId(ToFIlterModal tfm)
+        {
+
+            var query = _context.Books.AsQueryable();
+
+            if (tfm.IsAvailable.HasValue)
+            {
+                query = query.Where(b => b.IsAvailable == tfm.IsAvailable);
+            }
+
+
+            if (tfm.CategoryIds != null && tfm.CategoryIds.Count > 0)
+            {
+                query = query.Where(b => tfm.CategoryIds.Contains(b.CategoryId));
+            }
+
+
+            return await query.ToListAsync();
         }
 
     }

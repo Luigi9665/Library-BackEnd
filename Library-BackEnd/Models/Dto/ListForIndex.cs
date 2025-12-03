@@ -2,12 +2,14 @@
 
 namespace Library_BackEnd.Models.Dto
 {
-    public class ManagementViewModel
+    public class ListForIndex
     {
 
-        public FormBookViewModel ToForm { get; set; } = new();
-
         public List<ProductViewModel> Books { get; set; } = new();
+
+        public List<Category> Categories { get; set; } = new();
+
+
 
     }
 }

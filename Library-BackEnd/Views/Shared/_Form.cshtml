@@ -1,8 +1,5 @@
-﻿@model Library_BackEnd.Models.Entity.Book;
+﻿@model Library_BackEnd.Models.Dto.FormBookViewModel;
 
-@{
-    // Layout = "_Layout";
-}
 
 <style>
     :root {
@@ -138,63 +135,75 @@
         transform: translateY(-2px);
     }
 
-    textarea.form-control {
-        min-height: 100px;
-        resize: vertical;
-        font-family: inherit;
+    select.form-control {
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23eee' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        padding-right: 2.5rem;
+        cursor: pointer;
+    }
+
+    select.form-control option {
+        background: var(--bg-input);
+        color: var(--text-primary);
+        padding: 0.5rem;
     }
 </style>
 
-<div class="form-container my-5">
-    <h2 class="form-title">AGGIUNGI LIBRO</h2>
-
-    <form asp-controller="Library" asp-action="CreateOrUpdate" method="post">
+<div class="form-container">
+    <h2 class="form-title">@(Model.BookToEdit.Id != Guid.Empty ? "MODIFICA LIBRO" : "AGGIUNGI LIBRO")</h2>
+    
+    <form asp-action="CreateOrUpdate" method="post">
         <div asp-validation-summary="ModelOnly" class="validation-error"></div>
-
-        @if(Model.Id != Guid.Empty)
+        
+        @if(Model.BookToEdit.Id != Guid.Empty)
         {
-            @* <input type="hidden" name="_method" value="PUT" /> *@
-        <input type="hidden" asp-for="Id" />
-		}
-
-
+            <input type="hidden" asp-for="BookToEdit.Id" />
+        }
+        
         <div class="form-group">
-            <label asp-for="Title" class="form-label">Titolo</label>
-            <input asp-for="Title" class="form-control" placeholder="Inserisci il titolo del libro" />
-            <span asp-validation-for="Title" class="validation-error"></span>
+            <label asp-for="BookToEdit.Title" class="form-label">Titolo</label>
+            <input asp-for="BookToEdit.Title" class="form-control" placeholder="Inserisci il titolo del libro" />
+            <span asp-validation-for="BookToEdit.Title" class="validation-error"></span>
         </div>
 
         <div class="form-group">
-            <label asp-for="Author" class="form-label">Autore</label>
-            <input asp-for="Author" class="form-control" placeholder="Nome dell'autore" />
-            <span asp-validation-for="Author" class="validation-error"></span>
+            <label asp-for="BookToEdit.Author" class="form-label">Autore</label>
+            <input asp-for="BookToEdit.Author" class="form-control" placeholder="Nome dell'autore" />
+            <span asp-validation-for="BookToEdit.Author" class="validation-error"></span>
         </div>
 
-        @* <div class="form-group">
-            <label asp-for="Genre" class="form-label">Genere</label>
-            <input asp-for="Genre" class="form-control" placeholder="Es: Fantasy, Thriller, Romanzo..." />
-            <span asp-validation-for="Genre" class="validation-error"></span>
-        </div> *@
+        <div class="form-group">
+            <label asp-for="BookToEdit.CategoryId" class="form-label">Categoria</label>
+            <select asp-for="BookToEdit.CategoryId" class="form-control" >
+                <option value="">-- Seleziona una categoria --</option>
+                @foreach (var category in Model.Categories)
+                {
+                    <option value="@category.Id">@category.Name</option>
+                }
+            </select>
+            <span asp-validation-for="BookToEdit.CategoryId" class="validation-error"></span>
+        </div>
 
         <div class="form-group">
-            <label asp-for="CoverImageUrl" class="form-label">URL Copertina (opzionale)</label>
-            <input asp-for="CoverImageUrl" class="form-control" placeholder="https://esempio.com/copertina.jpg" />
-            <span asp-validation-for="CoverImageUrl" class="validation-error"></span>
+            <label asp-for="BookToEdit.CoverImageUrl" class="form-label">URL Copertina (opzionale)</label>
+            <input asp-for="BookToEdit.CoverImageUrl" class="form-control" placeholder="https://esempio.com/copertina.jpg" />
+            <span asp-validation-for="BookToEdit.CoverImageUrl" class="validation-error"></span>
         </div>
 
         <div class="form-group">
             <div class="form-check-container">
-                <input asp-for="IsAvailable" class="form-check-input" type="checkbox" />
-                <label asp-for="IsAvailable" class="form-check-label">Disponibile per il prestito</label>
+                <input asp-for="BookToEdit.IsAvailable" class="form-check-input" type="checkbox" />
+                <label asp-for="BookToEdit.IsAvailable" class="form-check-label">Disponibile per il prestito</label>
             </div>
         </div>
 
         <div class="form-actions">
-            <button type="submit" class="btn btn-primary"> @(Model.Id != Guid.Empty ? "Modifica" : "Salva Libro")
+            <button type="submit" class="btn btn-primary">
+                @(Model.BookToEdit.Id != Guid.Empty ? "Modifica Libro" : "Salva Libro")
             </button>
-
-            <button onclick="ReturnToBackoffice()" type="button" class="btn btn-secondary" style="text-align: center; text-decoration: none; line-height: 1.5;"> Annulla </button>
-
+            <a asp-action="Index" class="btn btn-secondary" style="text-align: center; text-decoration: none; line-height: 1.5;">Annulla</a>
         </div>
     </form>
 </div>

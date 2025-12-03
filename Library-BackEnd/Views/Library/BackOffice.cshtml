@@ -6,7 +6,7 @@
 
 <div>
     <section>
-        <partial name="_Form" model="Model.BookToEdit" />
+        <partial name="_Form" model="Model.ToForm" />
     </section>
 
     @if(TempData["Message"] != null)
@@ -17,7 +17,7 @@
 
     <hr />
     <section>
-        <partial name="_ListBooksForManagement" model="Model.ToForm" />
+        <partial name="_ListBooksForManagement" model="Model.Books" />
     </section>
 
 </div>

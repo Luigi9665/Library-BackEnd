@@ -14,38 +14,66 @@ namespace Library_BackEnd.Controllers
 
         private async Task<ManagementViewModel> GetManageView(Book b)
         {
+
+            var AllBooks = _bookService.GetAllBooks();
+
+            var BooksToView = new List<ProductViewModel>();
+
+            foreach (var book in AllBooks)
+            {
+
+                var category = await _categoryService.GetCategoryById(book.CategoryId);
+
+                BooksToView.Add(new ProductViewModel
+                {
+                    Id = book.Id,
+                    Title = book.Title,
+                    IsAvailable = book.IsAvailable,
+                    CoverImageUrl = book.CoverImageUrl,
+                    CategoryId = category.Id,
+                    NameCategory = category.Name
+                });
+            }
+
             return new ManagementViewModel
             {
                 ToForm =
                 {
-                    Books= _bookService.GetAllBooks().Select(book => new ProductViewModel
-                        {
-                            Id = book.Id,
-                            Title = book.Title,
-                            IsAvailable = book.IsAvailable,
-                            CoverImageUrl = book.CoverImageUrl
-                         }).ToList(),
-                    Categories = await _categoryService.GetAllCategories()
+                    Categories = await _categoryService.GetAllCategories(),
+                    BookToEdit = b
                 },
-
-                BookToEdit = b
+                Books = BooksToView
             };
         }
         private async Task<ManagementViewModel> GetManageView()
         {
+            var AllBooks = _bookService.GetAllBooks();
+
+            var BooksToView = new List<ProductViewModel>();
+
+            foreach (var book in AllBooks)
+            {
+
+                var category = await _categoryService.GetCategoryById(book.CategoryId);
+
+                BooksToView.Add(new ProductViewModel
+                {
+                    Id = book.Id,
+                    Title = book.Title,
+                    IsAvailable = book.IsAvailable,
+                    CoverImageUrl = book.CoverImageUrl,
+                    CategoryId = category.Id,
+                    NameCategory = category.Name
+                });
+            }
+
             return new ManagementViewModel
             {
                 ToForm =
                 {
-                    Books= _bookService.GetAllBooks().Select(book => new ProductViewModel
-                        {
-                            Id = book.Id,
-                            Title = book.Title,
-                            IsAvailable = book.IsAvailable,
-                            CoverImageUrl = book.CoverImageUrl
-                         }).ToList(),
                     Categories = await _categoryService.GetAllCategories()
-                }
+                },
+                Books = BooksToView
             };
         }
 
@@ -55,22 +83,31 @@ namespace Library_BackEnd.Controllers
             _categoryService = categoryService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             var books = _bookService.GetAllBooks();
 
-            var bookViewModels = new List<ProductViewModel>();
+            var Categorys = await _categoryService.GetAllCategories();
+
+            var bookViewModels = new ListForIndex();
 
             foreach (var book in books)
             {
-                bookViewModels.Add(new ProductViewModel
+
+                var category = await _categoryService.GetCategoryById(book.CategoryId);
+
+                bookViewModels.Books.Add(new ProductViewModel
                 {
                     Id = book.Id,
                     Title = book.Title,
                     IsAvailable = book.IsAvailable,
-                    CoverImageUrl = book.CoverImageUrl
+                    CoverImageUrl = book.CoverImageUrl,
+                    CategoryId = category.Id,
+                    NameCategory = category.Name
                 });
             }
+
+            bookViewModels.Categories = Categorys;
 
             return View(bookViewModels);
         }
@@ -94,21 +131,29 @@ namespace Library_BackEnd.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateOrUpdate(Book book)
+        public async Task<IActionResult> CreateOrUpdate(FormBookViewModel fb)
         {
+
+            var book = fb.BookToEdit;
+
             var ModelManage = new ManagementViewModel();
             ModelManage = await GetManageView(book);
 
+
             if (!ModelState.IsValid)
             {
-
-
                 return View("BackOffice", ModelManage);
             }
+
+
 
             if (book.Id == Guid.Empty && book.Id == default)
             {
                 book.Id = Guid.NewGuid();
+
+                var category = await _categoryService.GetCategoryById(book.CategoryId);
+
+                book.Category = category;
 
                 _bookService.CreateBook(book);
 
@@ -146,5 +191,39 @@ namespace Library_BackEnd.Controllers
 
             return RedirectToAction("BackOffice");
         }
+
+
+        [HttpPost]
+        public async Task<IActionResult> FilterResult(ToFIlterModal filter)
+        {
+
+            var books = await _bookService.GetBooksByCategoryId(filter);
+
+            var Categorys = await _categoryService.GetAllCategories();
+
+            var bookViewModels = new ListForIndex();
+
+            foreach (var book in books)
+            {
+
+                var category = await _categoryService.GetCategoryById(book.CategoryId);
+
+                bookViewModels.Books.Add(new ProductViewModel
+                {
+                    Id = book.Id,
+                    Title = book.Title,
+                    IsAvailable = book.IsAvailable,
+                    CoverImageUrl = book.CoverImageUrl,
+                    CategoryId = category.Id,
+                    NameCategory = category.Name
+                });
+            }
+
+            bookViewModels.Categories = Categorys;
+
+            return View("Index", bookViewModels);
+
+        }
+
     }
 }
