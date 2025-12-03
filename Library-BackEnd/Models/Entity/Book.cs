@@ -14,8 +14,8 @@ namespace Library_BackEnd.Models.Entity
         [Required(ErrorMessage = "L'autore del libro è obbligatorio")]
         public string Author { get; set; }
 
-        [Required(ErrorMessage = "Il genere del libro è obbligatorio")]
-        public string Genre { get; set; }
+        //[Required(ErrorMessage = "Il genere del libro è obbligatorio")]
+        //public string Genre { get; set; }
 
         [Required]
         public bool IsAvailable { get; set; }
@@ -25,5 +25,12 @@ namespace Library_BackEnd.Models.Entity
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
+        // Foreign Key per la categoria
+        public Guid CategoryId { get; set; }
+
+        public Category Category { get; set; }
+
+
+        public ICollection<RentRecord> RentRecords { get; set; }
     }
 }

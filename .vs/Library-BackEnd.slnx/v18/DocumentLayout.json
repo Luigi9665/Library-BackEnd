@@ -3,56 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\controllers\\librarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\controllers\\librarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\views\\shared\\_form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\views\\shared\\_form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\views\\library\\backoffice.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\views\\library\\backoffice.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\models\\dto\\managementviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\models\\dto\\managementviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\views\\shared\\_listbooksformanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\views\\shared\\_listbooksformanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\views\\library\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\views\\library\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\views\\shared\\_form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\views\\shared\\_form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\models\\dto\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\models\\dto\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\models\\entity\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\models\\entity\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\models\\entity\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\models\\entity\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\controllers\\librarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\controllers\\librarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,8 +22,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Form.cshtml",
+              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Views\\Shared\\_Form.cshtml",
+              "RelativeDocumentMoniker": "Library-BackEnd\\Views\\Shared\\_Form.cshtml",
+              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Views\\Shared\\_Form.cshtml",
+              "RelativeToolTip": "Library-BackEnd\\Views\\Shared\\_Form.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-03T15:53:08.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BackOffice.cshtml",
+              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Views\\Library\\BackOffice.cshtml",
+              "RelativeDocumentMoniker": "Library-BackEnd\\Views\\Library\\BackOffice.cshtml",
+              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Views\\Library\\BackOffice.cshtml",
+              "RelativeToolTip": "Library-BackEnd\\Views\\Library\\BackOffice.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-03T15:52:46.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LibraryController.cs",
+              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Controllers\\LibraryController.cs",
+              "RelativeDocumentMoniker": "Library-BackEnd\\Controllers\\LibraryController.cs",
+              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Controllers\\LibraryController.cs",
+              "RelativeToolTip": "Library-BackEnd\\Controllers\\LibraryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T15:44:17.703Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -77,161 +76,8 @@
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_ListBooksForManagement.cshtml",
-              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Views\\Shared\\_ListBooksForManagement.cshtml",
-              "RelativeDocumentMoniker": "Library-BackEnd\\Views\\Shared\\_ListBooksForManagement.cshtml",
-              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Views\\Shared\\_ListBooksForManagement.cshtml",
-              "RelativeToolTip": "Library-BackEnd\\Views\\Shared\\_ListBooksForManagement.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACcAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-02T14:05:41.386Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ManagementViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Models\\Dto\\ManagementViewModel.cs",
-              "RelativeDocumentMoniker": "Library-BackEnd\\Models\\Dto\\ManagementViewModel.cs",
-              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Models\\Dto\\ManagementViewModel.cs",
-              "RelativeToolTip": "Library-BackEnd\\Models\\Dto\\ManagementViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T13:50:22.659Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BackOffice.cshtml",
-              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Views\\Library\\BackOffice.cshtml",
-              "RelativeDocumentMoniker": "Library-BackEnd\\Views\\Library\\BackOffice.cshtml",
-              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Views\\Library\\BackOffice.cshtml",
-              "RelativeToolTip": "Library-BackEnd\\Views\\Library\\BackOffice.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-02T13:18:29.214Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "Library-BackEnd\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "Library-BackEnd\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAADsBAAAAAAAAAAAmwGABAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-12-01T14:18:43.074Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LibraryController.cs",
-              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Controllers\\LibraryController.cs",
-              "RelativeDocumentMoniker": "Library-BackEnd\\Controllers\\LibraryController.cs",
-              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Controllers\\LibraryController.cs",
-              "RelativeToolTip": "Library-BackEnd\\Controllers\\LibraryController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T14:23:54.333Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "_Form.cshtml",
-              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Views\\Shared\\_Form.cshtml",
-              "RelativeDocumentMoniker": "Library-BackEnd\\Views\\Shared\\_Form.cshtml",
-              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Views\\Shared\\_Form.cshtml",
-              "RelativeToolTip": "Library-BackEnd\\Views\\Shared\\_Form.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-01T14:22:10.164Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ProductViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Models\\Dto\\ProductViewModel.cs",
-              "RelativeDocumentMoniker": "Library-BackEnd\\Models\\Dto\\ProductViewModel.cs",
-              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Models\\Dto\\ProductViewModel.cs",
-              "RelativeToolTip": "Library-BackEnd\\Models\\Dto\\ProductViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T14:13:04.492Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BookService.cs",
-              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Services\\BookService.cs",
-              "RelativeDocumentMoniker": "Library-BackEnd\\Services\\BookService.cs",
-              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Services\\BookService.cs",
-              "RelativeToolTip": "Library-BackEnd\\Services\\BookService.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAowC8AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T13:41:41.929Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Program.cs",
-              "RelativeDocumentMoniker": "Library-BackEnd\\Program.cs",
-              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Program.cs",
-              "RelativeToolTip": "Library-BackEnd\\Program.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACMAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T13:34:22.852Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Views\\Library\\Index.cshtml",
-              "RelativeDocumentMoniker": "Library-BackEnd\\Views\\Library\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Views\\Library\\Index.cshtml",
-              "RelativeToolTip": "Library-BackEnd\\Views\\Library\\Index.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-01T14:18:39.444Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\appsettings.json",
-              "RelativeDocumentMoniker": "Library-BackEnd\\appsettings.json",
-              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\appsettings.json",
-              "RelativeToolTip": "Library-BackEnd\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-01T13:33:58.235Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Models\\Entity\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Library-BackEnd\\Models\\Entity\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Models\\Entity\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Library-BackEnd\\Models\\Entity\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T13:30:58.822Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Book.cs",
-              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Models\\Entity\\Book.cs",
-              "RelativeDocumentMoniker": "Library-BackEnd\\Models\\Entity\\Book.cs",
-              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Models\\Entity\\Book.cs",
-              "RelativeToolTip": "Library-BackEnd\\Models\\Entity\\Book.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T13:22:47.322Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             }
           ]
         }

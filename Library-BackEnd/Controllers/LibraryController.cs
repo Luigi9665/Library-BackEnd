@@ -10,40 +10,49 @@ namespace Library_BackEnd.Controllers
 
         private readonly BookService _bookService;
 
-        private ManagementViewModel GetManageView(Book b)
+        private readonly CategoryService _categoryService;
+
+        private async Task<ManagementViewModel> GetManageView(Book b)
         {
             return new ManagementViewModel
             {
-                Books = _bookService.GetAllBooks().Select(book => new ProductViewModel
+                ToForm =
                 {
-                    Id = book.Id,
-                    Title = book.Title,
-                    Genre = book.Genre,
-                    IsAvailable = book.IsAvailable,
-                    CoverImageUrl = book.CoverImageUrl
-                }).ToList(),
+                    Books= _bookService.GetAllBooks().Select(book => new ProductViewModel
+                        {
+                            Id = book.Id,
+                            Title = book.Title,
+                            IsAvailable = book.IsAvailable,
+                            CoverImageUrl = book.CoverImageUrl
+                         }).ToList(),
+                    Categories = await _categoryService.GetAllCategories()
+                },
 
                 BookToEdit = b
             };
         }
-        private ManagementViewModel GetManageView()
+        private async Task<ManagementViewModel> GetManageView()
         {
             return new ManagementViewModel
             {
-                Books = _bookService.GetAllBooks().Select(book => new ProductViewModel
+                ToForm =
                 {
-                    Id = book.Id,
-                    Title = book.Title,
-                    Genre = book.Genre,
-                    IsAvailable = book.IsAvailable,
-                    CoverImageUrl = book.CoverImageUrl
-                }).ToList()
+                    Books= _bookService.GetAllBooks().Select(book => new ProductViewModel
+                        {
+                            Id = book.Id,
+                            Title = book.Title,
+                            IsAvailable = book.IsAvailable,
+                            CoverImageUrl = book.CoverImageUrl
+                         }).ToList(),
+                    Categories = await _categoryService.GetAllCategories()
+                }
             };
         }
 
-        public LibraryController(BookService bookService)
+        public LibraryController(BookService bookService, CategoryService categoryService)
         {
             _bookService = bookService;
+            _categoryService = categoryService;
         }
 
         public IActionResult Index()
@@ -58,7 +67,6 @@ namespace Library_BackEnd.Controllers
                 {
                     Id = book.Id,
                     Title = book.Title,
-                    Genre = book.Genre,
                     IsAvailable = book.IsAvailable,
                     CoverImageUrl = book.CoverImageUrl
                 });
@@ -67,29 +75,29 @@ namespace Library_BackEnd.Controllers
             return View(bookViewModels);
         }
 
-        public IActionResult BackOffice()
+        public async Task<IActionResult> BackOffice()
         {
 
             var ModelManage = new ManagementViewModel();
-            ModelManage = GetManageView();
+            ModelManage = await GetManageView();
 
             return View(ModelManage);
         }
 
-        public IActionResult ToUpdate(Guid id)
+        public async Task<IActionResult> ToUpdate(Guid id)
         {
             var bookToEdit = _bookService.GetBookById(id);
 
             var ModelManage = new ManagementViewModel();
-            ModelManage = GetManageView(bookToEdit);
+            ModelManage = await GetManageView(bookToEdit);
             return View("BackOffice", ModelManage);
         }
 
         [HttpPost]
-        public IActionResult CreateOrUpdate(Book book)
+        public async Task<IActionResult> CreateOrUpdate(Book book)
         {
             var ModelManage = new ManagementViewModel();
-            ModelManage = GetManageView(book);
+            ModelManage = await GetManageView(book);
 
             if (!ModelState.IsValid)
             {
@@ -121,10 +129,10 @@ namespace Library_BackEnd.Controllers
         }
 
         [HttpPost]
-        public IActionResult Delete(Guid id)
+        public async Task<IActionResult> Delete(Guid id)
         {
             var ModelManage = new ManagementViewModel();
-            ModelManage = GetManageView(_bookService.GetBookById(id));
+            ModelManage = await GetManageView(_bookService.GetBookById(id));
 
 
             if (_bookService.DeleteBook(id))

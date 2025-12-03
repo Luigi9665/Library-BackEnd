@@ -31,7 +31,7 @@
                     }
                     <div class="book-info">
                         <h3 class="book-title">@book.Title</h3>
-                        <p class="text-white-50 my-2">@book.Genre</p>
+                        @* <p class="text-white-50 my-2">@book.Genre</p> *@
                         <div class="availability-status">
                             <span class="led-indicator @(book.IsAvailable ? "available" : "unavailable")"></span>
                             <span>@(book.IsAvailable ? "Disponibile" : "Non disponibile")</span>

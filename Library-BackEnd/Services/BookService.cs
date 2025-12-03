@@ -40,7 +40,6 @@ namespace Library_BackEnd.Services
 
             existingBook.Title = book.Title;
             existingBook.Author = book.Author;
-            existingBook.Genre = book.Genre;
             existingBook.IsAvailable = book.IsAvailable;
             existingBook.CoverImageUrl = book.CoverImageUrl;
             existingBook.CreatedAt = book.CreatedAt;

@@ -9,6 +9,9 @@ builder.Services.AddControllersWithViews();
 
 // add service to DI
 builder.Services.AddScoped<BookService>();
+builder.Services.AddScoped<CategoryService>();
+builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<RentRecordService>();
 
 // aggiungo il services per il DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>

@@ -5,7 +5,7 @@ namespace Library_BackEnd.Models.Dto
     public class ManagementViewModel
     {
 
-        public List<ProductViewModel> Books { get; set; } = new();
+        public FormBookViewModel ToForm { get; set; } = new();
 
         public Book BookToEdit { get; set; } = new();
 
