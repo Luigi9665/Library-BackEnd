@@ -1,4 +1,5 @@
 ﻿using Library_BackEnd.Models.Entity;
+using Microsoft.EntityFrameworkCore;
 
 namespace Library_BackEnd.Services
 {
@@ -12,6 +13,11 @@ namespace Library_BackEnd.Services
             _context = context;
         }
 
+        public RentRecord GetRentRecordsByBookId(Guid bookId)
+        {
+            return _context.RentRecords.Where(r => r.BookId == bookId)
+                .FirstOrDefault();
+        }
 
     }
 }

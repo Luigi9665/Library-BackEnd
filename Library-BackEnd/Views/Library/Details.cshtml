@@ -1,0 +1,397 @@
+﻿
+@model BookDetailsViewModel
+
+@{
+    ViewData["Title"] = "Dettagli Libro";
+}
+
+<style>
+    :root {
+        --bg-dark: #1a1a2e;
+        --bg-card: #16213e;
+        --bg-card-hover: #1f2b47;
+        --accent: #0f3460;
+        --text-primary: #eee;
+        --text-secondary: #a0a0a0;
+        --border-color: #2a3f5f;
+        --success: #00ff88;
+        --danger: #ff4757;
+    }
+
+    body {
+        background-color: var(--bg-dark);
+        color: var(--text-primary);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .details-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .back-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.6rem 1.2rem;
+        background: transparent;
+        color: var(--text-secondary);
+        text-decoration: none;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        border: 1px solid var(--border-color);
+        margin-bottom: 2rem;
+        font-size: 0.9rem;
+    }
+
+        .back-button:hover {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border-color: var(--accent);
+        }
+
+        .back-button svg {
+            width: 18px;
+            height: 18px;
+            stroke-width: 2;
+        }
+
+    .book-details-card {
+        background: var(--bg-card);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        margin-bottom: 2rem;
+    }
+
+    .book-header {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .book-cover-large {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .book-cover-placeholder {
+        width: 100%;
+        height: 400px;
+        background: var(--accent);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 4rem;
+    }
+
+    .book-main-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .book-title-large {
+        font-size: 2.5rem;
+        font-weight: 300;
+        margin: 0;
+        color: var(--text-primary);
+    }
+
+    .book-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .meta-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .meta-label {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .meta-value {
+        font-size: 1.1rem;
+        color: var(--text-primary);
+        font-weight: 500;
+    }
+
+    .status-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        width: fit-content;
+    }
+
+        .status-badge.available {
+            background: rgba(0, 255, 136, 0.1);
+            color: var(--success);
+            border: 1px solid var(--success);
+        }
+
+        .status-badge.unavailable {
+            background: rgba(255, 71, 87, 0.1);
+            color: var(--danger);
+            border: 1px solid var(--danger);
+        }
+
+    .led-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+
+        .led-dot.available {
+            background: var(--success);
+            box-shadow: 0 0 8px var(--success);
+            animation: pulse-available 2s infinite;
+        }
+
+        .led-dot.unavailable {
+            background: var(--danger);
+            box-shadow: 0 0 8px var(--danger);
+        }
+
+    @keyframes pulse-available {
+        0%, 100% {
+            box-shadow: 0 0 8px var(--success);
+        }
+
+        50% {
+            box-shadow: 0 0 16px var(--success);
+        }
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+        margin: 0 0 1.5rem 0;
+        color: var(--text-primary);
+    }
+
+    .records-table-wrapper {
+        background: var(--bg-card);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .records-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .records-table thead {
+            background: var(--accent);
+        }
+
+        .records-table th {
+            padding: 1rem 1.5rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .records-table tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: background 0.3s ease;
+        }
+
+            .records-table tbody tr:hover {
+                background: var(--bg-card-hover);
+            }
+
+            .records-table tbody tr:last-child {
+                border-bottom: none;
+            }
+
+        .records-table td {
+            padding: 1rem 1.5rem;
+            color: var(--text-primary);
+        }
+
+    .record-status {
+        display: inline-block;
+        padding: 0.3rem 0.8rem;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+        .record-status.active {
+            background: rgba(255, 167, 38, 0.1);
+            color: #ffa726;
+            border: 1px solid #ffa726;
+        }
+
+        .record-status.completed {
+            background: rgba(0, 255, 136, 0.1);
+            color: var(--success);
+            border: 1px solid var(--success);
+        }
+
+    .empty-records {
+        padding: 3rem;
+        text-align: center;
+        color: var(--text-secondary);
+    }
+
+    .empty-records-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        opacity: 0.3;
+    }
+
+    @media (max-width: 768px) {
+        .book-header {
+            grid-template-columns: 1fr;
+        }
+
+        .book-cover-large,
+        .book-cover-placeholder {
+            height: 300px;
+        }
+
+        .book-title-large {
+            font-size: 1.8rem;
+        }
+    }
+</style>
+
+<div class="details-container">
+
+
+    <div class="book-details-card">
+        <div class="book-header">
+            <div>
+                @if (!string.IsNullOrEmpty(Model.Book.CoverImageUrl))
+                {
+                    <img src="@Model.Book.CoverImageUrl" alt="@Model.Book.Title" class="book-cover-large" />
+                }
+                else
+                {
+                    <div class="book-cover-placeholder">📚</div>
+                }
+            </div>
+
+            <div class="book-main-info">
+                <h1 class="book-title-large">@Model.Book.Title</h1>
+
+                <div class="book-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Autore</span>
+                        <span class="meta-value">@Model.Book.Author</span>
+                    </div>
+
+                    <div class="meta-item">
+                        <span class="meta-label">Categoria</span>
+                        <span class="meta-value">@Model.Book.Category.Name</span>
+                    </div>
+
+                    <div class="meta-item">
+                        <span class="meta-label">Data Aggiunta</span>
+                        <span class="meta-value">@Model.Book.CreatedAt.ToString("dd/MM/yyyy")</span>
+                    </div>
+                </div>
+
+                <div class="meta-item">
+                    <span class="meta-label">Disponibilità</span>
+                    @if (Model.Book.IsAvailable)
+                    {
+                        <div class="status-badge available">
+                            <span class="led-dot available"></span>
+                            Disponibile
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="status-badge unavailable">
+                            <span class="led-dot unavailable"></span>
+                            Non Disponibile
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="section-title">STORICO PRESTITI</h2>
+
+    @if (Model.RentRecords != null && Model.RentRecords.Any())
+    {
+        <div class="records-table-wrapper">
+            <table class="records-table">
+                <thead>
+                    <tr>
+                        <th>Utente</th>
+                        <th>Data Prestito</th>
+                        <th>Data Restituzione Prevista</th>
+                        <th>Data Restituzione Effettiva</th>
+                        <th>Stato</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var record in Model.RentRecords)
+                    {
+                        <tr>
+                            <td>@record.User.Name @record.User.Surname</td>
+                            <td>@record.RentDate.ToString()</td>
+                            <td>@record.ReturnDate.ToString()</td>
+                            <td>
+                                @if (record.ReturnDate.HasValue)
+                                {
+                                    @record.ReturnDate.Value.ToString()
+                                }
+                                else
+                                {
+                                    <span style="color: var(--text-secondary);">In corso</span>
+                                }
+                            </td>
+                            <td>
+                                @if (record.ReturnDate.HasValue)
+                                {
+                                    <span class="record-status completed">Completato</span>
+                                }
+                                else
+                                {
+                                    <span class="record-status active">In Prestito</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="records-table-wrapper">
+            <div class="empty-records">
+                <div class="empty-records-icon">📋</div>
+                <p>Nessun prestito registrato per questo libro</p>
+            </div>
+        </div>
+    }
+</div>

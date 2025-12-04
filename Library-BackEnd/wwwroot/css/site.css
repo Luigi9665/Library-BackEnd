@@ -425,6 +425,15 @@ body {
     margin: 0;
 }
 
+.btn-details{
+    text-decoration:none;
+    background: #2a3f5f;
+    color: #eee;
+    padding-block: 2px;
+    padding-inline: 3px;
+    border-radius: 10px;
+}
+
 @media (max-width: 768px) {
     .books-table {
         font-size: 0.9rem;

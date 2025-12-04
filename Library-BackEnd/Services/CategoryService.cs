@@ -15,7 +15,7 @@ namespace Library_BackEnd.Services
 
         public async Task<bool> CreateCategory(Category category)
         {
-            _context.Categories.AddAsync(category);
+            _context.Categories.Add(category);
 
             return await _context.SaveChangesAsync() > 0;
         }

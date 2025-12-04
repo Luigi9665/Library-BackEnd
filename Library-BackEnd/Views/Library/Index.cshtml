@@ -34,9 +34,17 @@
                     <div class="book-info">
                         <h3 class="book-title pb-1">@book.Title</h3>
                         <p class="text-white-50 mb-2">@book.NameCategory</p> 
+                        <div class="d-flex align-items-center justify-content-between" >
                         <div class="availability-status">
                             <span class="led-indicator @(book.IsAvailable ? "available" : "unavailable")"></span>
                             <span>@(book.IsAvailable ? "Disponibile" : "Non disponibile")</span>
+                        </div>
+                        <a  class="btn-details">
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Dettagli
+                        </a>
                         </div>
                     </div>
                 </div>

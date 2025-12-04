@@ -46,5 +46,18 @@
             }, 3000);
 		}
 
+            function updateFileName(input) {
+            const label = document.getElementById('fileLabel');
+            const textSpan = label.querySelector('.file-input-text');
+
+            if (input.files && input.files.length > 0) {
+                textSpan.textContent = input.files[0].name;
+                label.classList.add('has-file');
+            } else {
+                textSpan.textContent = 'Nessun file selezionato';
+                label.classList.remove('has-file');
+            }
+        }
+
     </script>
 }

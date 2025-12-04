@@ -3,52 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\views\\library\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\views\\library\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\services\\rentrecordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\services\\rentrecordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\controllers\\librarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\controllers\\librarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\views\\shared\\_modalfilter.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\views\\shared\\_modalfilter.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\models\\dto\\listforindex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\models\\dto\\listforindex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\models\\dto\\tofiltermodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\models\\dto\\tofiltermodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\views\\shared\\_form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\views\\shared\\_form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\views\\shared\\_listbooksformanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\views\\shared\\_listbooksformanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\models\\dto\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\models\\dto\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\models\\entity\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\models\\entity\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\views\\library\\backoffice.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\views\\library\\backoffice.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|c:\\users\\luigi\\desktop\\epicode\\backend\\library-backend\\library-backend\\models\\entity\\rentrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09D23979-BCE6-3CCA-A625-2FD26697329C}|Library-BackEnd\\Library-BackEnd.csproj|solutionrelative:library-backend\\models\\entity\\rentrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,144 +42,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ToFIlterModal.cs",
-              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Models\\Dto\\ToFIlterModal.cs",
-              "RelativeDocumentMoniker": "Library-BackEnd\\Models\\Dto\\ToFIlterModal.cs",
-              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Models\\Dto\\ToFIlterModal.cs",
-              "RelativeToolTip": "Library-BackEnd\\Models\\Dto\\ToFIlterModal.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAgAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "RentRecord.cs",
+              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Models\\Entity\\RentRecord.cs",
+              "RelativeDocumentMoniker": "Library-BackEnd\\Models\\Entity\\RentRecord.cs",
+              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Models\\Entity\\RentRecord.cs",
+              "RelativeToolTip": "Library-BackEnd\\Models\\Entity\\RentRecord.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T21:34:15.028Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BookService.cs",
-              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Services\\BookService.cs",
-              "RelativeDocumentMoniker": "Library-BackEnd\\Services\\BookService.cs",
-              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Services\\BookService.cs",
-              "RelativeToolTip": "Library-BackEnd\\Services\\BookService.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAiwD4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T20:57:43.702Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ListForIndex.cs",
-              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Models\\Dto\\ListForIndex.cs",
-              "RelativeDocumentMoniker": "Library-BackEnd\\Models\\Dto\\ListForIndex.cs",
-              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Models\\Dto\\ListForIndex.cs",
-              "RelativeToolTip": "Library-BackEnd\\Models\\Dto\\ListForIndex.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T20:38:21.174Z",
+              "WhenOpened": "2025-12-04T15:52:36.506Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Views\\Library\\Index.cshtml",
-              "RelativeDocumentMoniker": "Library-BackEnd\\Views\\Library\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Views\\Library\\Index.cshtml",
-              "RelativeToolTip": "Library-BackEnd\\Views\\Library\\Index.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-03T20:36:40.261Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_ModalFilter.cshtml",
-              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Views\\Shared\\_ModalFilter.cshtml",
-              "RelativeDocumentMoniker": "Library-BackEnd\\Views\\Shared\\_ModalFilter.cshtml",
-              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Views\\Shared\\_ModalFilter.cshtml",
-              "RelativeToolTip": "Library-BackEnd\\Views\\Shared\\_ModalFilter.cshtml",
-              "ViewState": "AgIAAA0BAAAAAAAAAAAAAB8BAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-03T20:34:48.959Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ProductViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Models\\Dto\\ProductViewModel.cs",
-              "RelativeDocumentMoniker": "Library-BackEnd\\Models\\Dto\\ProductViewModel.cs",
-              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Models\\Dto\\ProductViewModel.cs",
-              "RelativeToolTip": "Library-BackEnd\\Models\\Dto\\ProductViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Title": "RentRecordService.cs",
+              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Services\\RentRecordService.cs",
+              "RelativeDocumentMoniker": "Library-BackEnd\\Services\\RentRecordService.cs",
+              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Services\\RentRecordService.cs",
+              "RelativeToolTip": "Library-BackEnd\\Services\\RentRecordService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T17:12:09.788Z",
+              "WhenOpened": "2025-12-04T15:52:09.988Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "_ListBooksForManagement.cshtml",
-              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Views\\Shared\\_ListBooksForManagement.cshtml",
-              "RelativeDocumentMoniker": "Library-BackEnd\\Views\\Shared\\_ListBooksForManagement.cshtml",
-              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Views\\Shared\\_ListBooksForManagement.cshtml",
-              "RelativeToolTip": "Library-BackEnd\\Views\\Shared\\_ListBooksForManagement.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAABuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-03T17:11:20.698Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Book.cs",
-              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Models\\Entity\\Book.cs",
-              "RelativeDocumentMoniker": "Library-BackEnd\\Models\\Entity\\Book.cs",
-              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Models\\Entity\\Book.cs",
-              "RelativeToolTip": "Library-BackEnd\\Models\\Entity\\Book.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T17:07:19.748Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CategoryService.cs",
-              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Services\\CategoryService.cs",
-              "RelativeDocumentMoniker": "Library-BackEnd\\Services\\CategoryService.cs",
-              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Services\\CategoryService.cs",
-              "RelativeToolTip": "Library-BackEnd\\Services\\CategoryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T16:37:40.736Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "_Form.cshtml",
-              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Views\\Shared\\_Form.cshtml",
-              "RelativeDocumentMoniker": "Library-BackEnd\\Views\\Shared\\_Form.cshtml",
-              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Views\\Shared\\_Form.cshtml",
-              "RelativeToolTip": "Library-BackEnd\\Views\\Shared\\_Form.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAJoAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-03T15:53:08.214Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "BackOffice.cshtml",
-              "DocumentMoniker": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Views\\Library\\BackOffice.cshtml",
-              "RelativeDocumentMoniker": "Library-BackEnd\\Views\\Library\\BackOffice.cshtml",
-              "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Views\\Library\\BackOffice.cshtml",
-              "RelativeToolTip": "Library-BackEnd\\Views\\Library\\BackOffice.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-03T15:52:46.245Z"
             },
             {
               "$type": "Document",
@@ -225,9 +74,9 @@
               "RelativeDocumentMoniker": "Library-BackEnd\\Controllers\\LibraryController.cs",
               "ToolTip": "C:\\Users\\Luigi\\Desktop\\Epicode\\BackEnd\\Library-BackEnd\\Library-BackEnd\\Controllers\\LibraryController.cs",
               "RelativeToolTip": "Library-BackEnd\\Controllers\\LibraryController.cs",
-              "ViewState": "AgIAALgAAAAAAAAAAAAAwMUAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAPUAAAAAAAAAAAAkwAsBAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T15:44:17.703Z",
+              "WhenOpened": "2025-12-04T15:49:22.602Z",
               "EditorCaption": ""
             }
           ]

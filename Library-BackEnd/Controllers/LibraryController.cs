@@ -12,6 +12,10 @@ namespace Library_BackEnd.Controllers
 
         private readonly CategoryService _categoryService;
 
+        private readonly RentRecordService _rentRecordService;
+
+        private readonly IWebHostEnvironment _env;
+
         private async Task<ManagementViewModel> GetManageView(Book b)
         {
 
@@ -40,7 +44,12 @@ namespace Library_BackEnd.Controllers
                 ToForm =
                 {
                     Categories = await _categoryService.GetAllCategories(),
-                    BookToEdit = b
+                    Id = b.Id,
+                    Title = b.Title,
+                    Author = b.Author,
+                    IsAvailable = b.IsAvailable,
+                    CreatedAt = b.CreatedAt,
+                    CategoryId = b.CategoryId
                 },
                 Books = BooksToView
             };
@@ -77,10 +86,30 @@ namespace Library_BackEnd.Controllers
             };
         }
 
-        public LibraryController(BookService bookService, CategoryService categoryService)
+        private async Task<string> SaveImage(IFormFile imageFile)
+        {
+            var uploadsFolder = Path.Combine(_env.WebRootPath, "Uploads");
+
+            if (!Directory.Exists(uploadsFolder))
+            {
+                Directory.CreateDirectory(uploadsFolder);
+            }
+
+            var uniqueFileName = Guid.NewGuid() + Path.GetExtension(imageFile.FileName);
+            var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+            using FileStream fileStream = new FileStream(filePath, FileMode.Create);
+
+            await imageFile.CopyToAsync(fileStream);
+
+            return "/Uploads/" + uniqueFileName;
+        }
+
+        public LibraryController(BookService bookService, CategoryService categoryService, IWebHostEnvironment env, RentRecordService rentRecordService)
         {
             _bookService = bookService;
             _categoryService = categoryService;
+            _env = env;
+            _rentRecordService = rentRecordService;
         }
 
         public async Task<IActionResult> Index()
@@ -134,7 +163,16 @@ namespace Library_BackEnd.Controllers
         public async Task<IActionResult> CreateOrUpdate(FormBookViewModel fb)
         {
 
-            var book = fb.BookToEdit;
+            Book book = new Book
+            {
+                Id = fb.Id,
+                Title = fb.Title,
+                Author = fb.Author,
+                IsAvailable = fb.IsAvailable,
+                CoverImageUrl = fb.CoverImage != null ? await SaveImage(fb.CoverImage) : "",
+                CreatedAt = fb.CreatedAt,
+                CategoryId = fb.CategoryId
+            };
 
             var ModelManage = new ManagementViewModel();
             ModelManage = await GetManageView(book);
@@ -225,5 +263,12 @@ namespace Library_BackEnd.Controllers
 
         }
 
+        public IActionResult Details(Guid id)
+        {
+            RentRecord rentRecord = _rentRecordService.GetRentRecordsByBookId(id);
+
+
+            return View();
+        }
     }
 }
